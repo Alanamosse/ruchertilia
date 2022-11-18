@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ruchertilia-78b9f": {
+      "hosting": {
+        "ruchertilia": [
+          "ruchertilia-78b9f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ruchertilia-78b9f"
+  }
+}

@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ruchertilia:build:production",
+            "firebaseProject": "ruchertilia-78b9f",
+            "firebaseHostingSite": "ruchertilia-78b9f"
+          }
         }
       }
     }

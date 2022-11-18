@@ -1,0 +1,57 @@
+<div class="navigation-wrapper" id="galerie">
+  <div class="keen-slider keen-slider--vertical" #sliderRef>
+    <div class="keen-slider__slide number-slide1">
+      <a href="../../assets/images/cadre.jpg" data-title="Cadre de ruche">
+        <img src="../../assets/images/cadre.jpg" />
+      </a>
+    </div>
+    <div class="keen-slider__slide number-slide1">
+      <a href="../../assets/images/tournesol.jpg" data-title="Tournesol à Cuzieu">
+        <img src="../../assets/images/tournesol.jpg" />
+      </a>
+    </div>
+    <div class="keen-slider__slide number-slide1">
+      <a href="../../assets/images/hausse.jpg" data-title="Hausse">
+        <img src="../../assets/images/hausse.jpg" />
+      </a>
+    </div>
+    <div class="keen-slider__slide number-slide1">
+      <a href="../../assets/images/rucher_cuzieu.jpg" data-title="Rucher à Cuzieu">
+        <img src="../../assets/images/rucher_cuzieu.jpg" />
+      </a>
+    </div>
+  </div>
+  <svg
+    [ngClass]="
+      'arrow arrow--left ' + (currentSlide === 0 ? 'arrow--disabled' : '')
+    "
+    (click)="slider.prev()"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+    />
+  </svg>
+  <svg
+    *ngIf="slider"
+    [ngClass]="
+      'arrow arrow--right ' +
+      (slider.track.details.slides.length - 1 === currentSlide
+        ? 'arrow--disabled'
+        : '')
+    "
+    (click)="slider.next()"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+  </svg>
+</div>
+<div class="dots">
+  <button
+    (click)="slider.moveToIdx(i)"
+    *ngFor="let slide of dotHelper; let i = index"
+    [class]="'dot ' + (i === currentSlide ? 'active' : '')"
+  ></button>
+</div>

@@ -25,6 +25,9 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr);
 
+// start module
+import { StarRatingModule } from 'angular-star-rating';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +51,7 @@ registerLocaleData(localeFr);
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    StarRatingModule.forRoot(),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'},

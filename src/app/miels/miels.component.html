@@ -1,16 +1,24 @@
 <div class="container py-5" id="miels">
   <div class="container">
 
-    <h3 class="text-center thin">Les miels disponibles</h3>
-
+    <h1 class="display-6 text-dark">Les miels disponibles</h1>
     <div class="row">
       <div class="col-md-3 col-sm-6 highlight" *ngFor="let miel of miels; let i = index">
-        <div class="h-caption"><h4>{{miel.title}}</h4></div>
-
-        <div class="h-body text-center">
+        <div class="h-caption">
+          <h4 class="display-10 text-dark">{{miel.title}}</h4>
+        </div>
+        <div class="h-body">
           <p><img src="{{'../../assets/images/' + miel.title + '.PNG'}}" alt="" class="card-img-to" width="250" height="300" ></p>
           <p>{{miel.description}}</p>
-          <p>{{miel.place}}</p>
+          <p><b>Goût</b> : {{miel.taste}}</p>
+          <p><b>Texture</b> : {{miel.texture}}</p>
+          <table>
+            <tr>
+              <td><p><b>Puissance</b> :</p></td>
+              <td><star-rating [starType]="'svg'" labelText="" [rating]="miel.strength" staticColor="ok" [readOnly]="true"></star-rating></td>
+            </tr>
+          </table>
+          <p><b>Lieu de butinage</b> : {{miel.place}}</p>
           <p>{{miel.price | currency:'EUR':'symbol':'.2-2':'fr' }}</p>
         </div>
       </div>

@@ -22,6 +22,8 @@
     "@angular/router": "^14.2.0",
     "@aws-sdk/client-ses": "^3.213.0",
     "@aws-sdk/client-ses-node": "^0.1.0-preview.2",
+    "angular-star-rating": "^6.0.0",
+    "css-star-rating": "^1.3.1",
     "keen-slider": "^6.8.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

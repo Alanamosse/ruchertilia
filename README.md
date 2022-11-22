@@ -26,8 +26,14 @@ Used angularfire to interact with firebase backend.
 
 ``ng add @angular/fire``
 
-## Login to your google account then, init your deploy configuration, select firebase services used
+## Build app
+
+``ng build``
+
+# #Login to your google account
 ``firebase login``
+
+## Init your firebase backend with services used
 
 ``firebase init``   
 

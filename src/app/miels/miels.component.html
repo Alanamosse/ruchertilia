@@ -8,10 +8,10 @@
         <div class="h-caption"><h4>{{miel.title}}</h4></div>
 
         <div class="h-body text-center">
-          <p><img src="{{'../../assets/images/' + miel.title + '.PNG'}}" alt="" class="card-img-to" width="300" height="300" ></p>
+          <p><img src="{{'../../assets/images/' + miel.title + '.PNG'}}" alt="" class="card-img-to" width="250" height="300" ></p>
           <p>{{miel.description}}</p>
           <p>{{miel.place}}</p>
-          <p>{{miel.price | currency:'EUR' }}</p>
+          <p>{{miel.price | currency:'EUR':'symbol':'.2-2':'fr' }}</p>
         </div>
       </div>
     </div>

@@ -6,22 +6,37 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Personal doc
+## Useful links
+Development done after following this formation : 
+https://www.udemy.com/course/angular7-firebase-2019/learn/lecture/13656784
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Google console for Maps Api : https://console.cloud.google.com/google/maps-apis/
 
-## Build
+AWS console for email service SES : https://eu-west-3.console.aws.amazon.com/ses/home
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Firebase console for backend : https://console.firebase.google.com
 
-## Running unit tests
+Angularfire : https://github.com/angular/angularfire
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deployment
+Used angularfire to interact with firebase backend.
 
-## Running end-to-end tests
+## Install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+``ng add @angular/fire``
 
-## Further help
+## Login to your google account then, init your deploy configuration, select firebase services used
+``firebase login``
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+``firebase init``   
+
+## Deploy application
+``firebase deploy``
+
+## Debug 
+In case some error like 
+
+"_Error: There was an error reading functions\package.json:   functions\lib\index.js does not exist, can't deploy Cloud Functions_"
+
+Try using this in *_functions_* repo : ``npm run-script build``

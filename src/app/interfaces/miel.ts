@@ -6,5 +6,6 @@ export interface Miel {
   texture: string;
   strength: number;
   place: string;
-  price: number;
+  localprice: number;
+  notlocalprice: number;
 }

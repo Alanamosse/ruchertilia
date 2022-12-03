@@ -25,8 +25,12 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr);
 
-// start module
+// star rating module
 import { StarRatingModule } from 'angular-star-rating';
+
+// materials
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -52,6 +56,8 @@ import { StarRatingModule } from 'angular-star-rating';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     StarRatingModule.forRoot(),
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'},

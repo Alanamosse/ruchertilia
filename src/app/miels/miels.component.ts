@@ -74,15 +74,8 @@ export class MielsComponent implements OnInit {
 
   // Form to switch prices
   isChecked = true;
-  formGroup = this._formBuilder.group({
-    localPrices: ['', Validators.requiredTrue],
-  });
 
-  constructor(private _formBuilder: FormBuilder) { }
-
-  alertFormValues(formGroup: FormGroup) {
-    alert(JSON.stringify(formGroup.value, null, 2));
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

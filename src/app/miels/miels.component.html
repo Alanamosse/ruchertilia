@@ -1,16 +1,14 @@
 <div class="container py-5" id="miels">
   <div class="container">
     <h1 class="display-6 text-dark">Les miels disponibles</h1>
-    <form class="example-form" [formGroup]="formGroup" (ngSubmit)="alertFormValues(formGroup)" ngNativeValidate>
-      <mat-slide-toggle formControlName="localPrices">Prix à la ferme</mat-slide-toggle>
-    </form>
+    <mat-slide-toggle [(ngModel)]="isChecked">Prix à la ferme. (ou Prix vente directe ?)</mat-slide-toggle>
     <div class="row">
       <div class="col-md-3 col-sm-6 highlight" *ngFor="let miel of miels; let i = index">
         <div class="h-caption">
           <h2 class="display-12 text-dark" id="miel_title">{{miel.title}}</h2>
         </div>
         <div class="h-body text-muted">
-          <p><img src="{{'../../assets/images/honey/' + miel.title + '.jpg'}}" alt="" class="card-img-to" width="200" height="300" ></p>
+          <p><img src="{{'../../assets/images/honey/' + miel.title + '.jpg'}}" alt="{{'Miel de ' + miel.title }}" class="card-img-to" width="200" height="300" ></p>
           <p>{{miel.description}}</p>
           <p><b>Goût</b> : {{miel.taste}}</p>
           <p><b>Texture</b> : {{miel.texture}}</p>
@@ -21,7 +19,7 @@
             </tr>
           </table>
           <p><b>Lieu de butinage</b> : {{miel.place}}</p>
-          <div *ngIf="formGroup.valid; else elseBlock">
+          <div *ngIf="isChecked; else elseBlock">
             <p>{{miel.localprice | currency:'EUR':'symbol':'.2-2':'fr' }}</p>
           </div>
           <ng-template #elseBlock>
